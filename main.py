@@ -35,8 +35,8 @@ app.add_middleware(
 # 2. Ensemble Model Definition
 # ----------------------------
 class EnsembleModel(nn.Module):
-    def _init_(self, num_classes=13, weights=(0.5, 0.5, 0.0)):
-        super(EnsembleModel, self)._init_()
+    def __init__(self, num_classes=13, weights=(0.5, 0.5, 0.0)):
+        super(EnsembleModel, self).__init__()
         self.weights = weights
 
         # EfficientNetB3
