@@ -36,6 +36,7 @@ app.add_middleware(
 # ----------------------------
 class EnsembleModel(nn.Module):
     def __init__(self, num_classes=13, weights=(0.5, 0.5, 0.0)):
+
         super(EnsembleModel, self).__init__()
         self.weights = weights
 
