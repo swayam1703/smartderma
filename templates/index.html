@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDerma - AI Skin Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+  <a href="index.html" class="logo">  
+    <img src="SmartDerma_Logo-removebg-preview.png" alt="SmartDerma Logo" height="100" />
+  </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <label for="fileInput" class="get-started-btn">Get Started</label>
+  </nav>
+
+  <!-- Chatbot Widget -->
+<div class="chatbot-container" id="chatbot">
+  <div class="chatbot-header">SmartDerma Assistant</div>
+  <div class="chatbot-messages" id="chatbotMessages"></div>
+  <div class="chatbot-input">
+    <input type="text" id="userInput" placeholder="Ask something..." />
+    <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+<div class="chatbot-toggle" onclick="toggleChatbot()">
+  <i class="fas fa-comments"></i>
+</div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">AI-Powered Skin Disease Detection</h1>
+      <p class="hero-description">
+        Upload a skin photo for instant analysis using our advanced deep learning model.
+      </p>
+      <div class="hero-buttons">
+        <label for="fileInput" class="primary-btn" id="heroUploadBtn">
+          <i class="fas fa-upload"></i> Upload Photo
+        </label>
+        <a href="about.html" class="secondary-btn">
+          <i class="fas fa-info-circle"></i> Learn More
+        </a>
+      </div>
+    </div>
+    <!-- <div class="hero-image" id="uploadArea">
+      <div class="image-placeholder">
+        <i class="fas fa-camera"></i>
+        <p>Upload an image for analysis</p>
+      </div>
+    </div> -->
+    <div class="hero-image" id="uploadArea">
+      <div class="image-placeholder">
+        <i class="fas fa-camera"></i>
+        <p>Upload an image for analysis</p>
+        <p class="drag-text">or drag & drop here</p> <!-- New line -->
+      </div>
+    </div>
+    <div id="output" style="margin-top: 1rem; text-align: center; font-weight: bold;"></div>
+    <input type="file" id="fileInput" accept="image/*" hidden>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-upload"></i></div>
+        <h3>Upload Photo</h3>
+        <p>Take a clear photo of the affected skin area and upload it to our secure platform.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-robot"></i></div>
+        <h3>AI Analysis</h3>
+        <p>Our AI system analyzes the image using advanced algorithms.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon"><i class="fas fa-file-medical"></i></div>
+        <h3>Get Results</h3>
+        <p>Receive a detailed analysis and potential diagnosis within seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2 class="section-title">Advanced Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Secure & Private</h3>
+        <p>Your data is encrypted and never shared with third parties.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>Fast Results</h3>
+        <p>Get analysis within seconds of uploading your image.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+        <h3>AI Powered</h3>
+        <p>Trained on thousands of dermatological images for accuracy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Friendly</h3>
+        <p>Use our service on any device, anywhere, anytime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="SmartDerma_Logo-removebg-preview.png" alt="SmartDerma Logo" height="100" />
+      </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookie.html">Cookie Policy</a></li>
+            <li><a href="data-protection.html">Data Protection</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SmartDerma. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

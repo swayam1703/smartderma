@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartDerma - Results</title>
+  <link rel="stylesheet" href="outputstyles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="SmartDerma_Logo-removebg-preview.png" alt="SmartDerma Logo" height="100" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+   
+  </nav>
+
+  <div class="container">
+    <div class="results-header">
+      <h1>Your Analysis Results</h1>
+      <p>Here's what our AI detected based on your uploaded image</p>
+    </div>
+
+    <div class="results-content">
+      <div class="uploaded-image-container">
+        <img src="" alt="Uploaded skin image" class="uploaded-image" id="resultImage">
+        <div class="image-info">
+          <h3>Uploaded Image</h3>
+          <div class="image-metadata">
+            <div>
+              <i class="fas fa-calendar-alt"></i>
+              <span id="uploadDate"></span>
+            </div>
+            <div>
+              <i class="fas fa-image"></i>
+              <span id="fileName"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="analysis-container">
+        <div class="analysis-card">
+          <div class="card-header">
+            Analysis Results
+          </div>
+          <div class="card-body">
+            <div class="analysis-result">
+              <h3 id="mainDiagnosis"></h3>
+              <p class="analysis-description" id="diagnosisDescription"></p>
+              <div class="probability-bar">
+                <div class="probability-fill" id="confidenceBar"></div>
+              </div>
+              <div class="probability-labels">
+                <span id="probabilityValue"></span>
+                <span id="confidenceLevel"></span>
+              </div>
+            </div>
+
+            <div class="recommendations">
+              <h4>Recommendations:</h4>
+              <ul id="recommendationsList"></ul>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn primary-btn" id="downloadBtn">
+                <i class="fas fa-download"></i> Download Report
+              </button>
+              <button class="btn secondary-btn" id="shareBtn"> 
+                <i class="fas fa-share-alt"></i> Share Results
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="doctor-card">
+          <h3><i class="fas fa-user-md"></i> Find a Dermatologist Near You</h3>
+          <div class="doctor-finder">
+            <input type="text" class="location-input" placeholder="Enter your location">
+            <button class="btn primary-btn" id="findDoctorBtn">
+              <i class="fas fa-search"></i> Find Doctors
+            </button>
+          </div>
+        </div>
+
+        <div class="analysis-card disclaimer-card">
+          <div class="card-header">
+            Important Disclaimer
+          </div>
+          <div class="card-body">
+            <p>SmartDerma provides preliminary analysis only and is not intended to replace professional medical advice, diagnosis, or treatment. The analysis results are based on machine learning algorithms that may not be 100% accurate. Always consult with a healthcare professional for proper diagnosis and treatment of skin conditions.</p>
+          </div>
+        </div>
+        
+        <!-- <div class="try-another-btn">
+          <label for="fileInput" class="btn primary-btn">
+            <i class="fas fa-upload"></i> Try Another Photo
+          </label>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="SmartDerma_Logo-removebg-preview.png" alt="SmartDerma Logo" height="100" />
+  </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#team">Team</a></li>
+            <li><a href="about.html#careers">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookie.html">Cookie Policy</a></li>
+            <li><a href="data-protection.html">Data Protection</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SmartDerma. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="outputscript.js"></script>
+</body>
+</html>
+      
